@@ -1,0 +1,11 @@
+def find_substring(string1, string2):
+    # Find the index of the first occurrence of string2 in string1
+    index = string1.find(string2)
+    
+    # Return the index if found, otherwise return -1
+    return index if index != -1 else -1
+# Read input strings
+string1 = input().strip()
+string2 = input().strip()
+# Call the function and print the result
+print(find_substring(string1, string2))
