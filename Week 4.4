@@ -1,0 +1,25 @@
+def reverse_string(s):
+    s_list = list(s)
+    left, right = 0, len(s_list) - 1
+    while left < right:
+        # Move left pointer until it points to an alphabet character
+        while left < right and not s_list[left].isalpha():
+            left += 1
+        
+        # Move right pointer until it points to an alphabet character
+        while left < right and not s_list[right].isalpha():
+            right -= 1
+        
+        # Swap characters at left and right pointers
+        s_list[left], s_list[right] = s_list[right], s_list[left]
+        
+        # Move pointers inward
+        left += 1
+        right -= 1
+    
+    # Convert the list back to a string
+    return ''.join(s_list)
+# Read input string
+s = input().strip()
+# Call the function and print the result
+print(reverse_string(s))
