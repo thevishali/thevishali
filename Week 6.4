@@ -1,0 +1,24 @@
+mport sys
+def eliminate_common_elements(arr1, arr2):
+    # Find the union of the two arrays
+    union = set(arr1) | set(arr2)
+    # Find the intersection of the two arrays
+    intersection = set(arr1) & set(arr2)
+    # Subtract the intersection from the union to get the non-repeating elements
+    non_repeating = list(union - intersection)
+    non_repeating.sort()
+    # Count the number of non-repeating elements
+    count = len(non_repeating)
+    # Print the non-repeating elements and the count
+    if count == 0:
+        print("NO SUCH ELEMENTS")
+    else:
+        print(*non_repeating)
+        print(count)
+# Read the input
+input_str = sys.stdin.readlines()
+n, m = map(int, input_str[0].split())
+arr1 = list(map(int, input_str[1].split()))
+arr2 = list(map(int, input_str[2].split()))
+# Call the function
+eliminate_common_elements(arr1, arr2)
