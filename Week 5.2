@@ -1,0 +1,10 @@
+n=int(input())
+arr=[int(input()) for x in range(n)]
+f={}
+for i in arr:
+    if i in f:
+        f[i]+=1
+    else:
+        f[i]=1
+for j,k in f.items():
+    print(f"{j} occurs {k} times")
