@@ -1,0 +1,10 @@
+def common_characters(s1, s2, n):
+    set_s1 = set(s1)
+    set_s2 = set(s2)
+    common_chars = sorted(set_s1.intersection(set_s2))
+    return ''.join(common_chars[:n])
+s1 = input().strip()
+s2 = input().strip()
+n = int(input())
+
+print(common_characters(s1, s2, n)
