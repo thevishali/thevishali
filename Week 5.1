@@ -1,0 +1,10 @@
+t=int(input())
+for x in range(t):
+    s1=int(input())
+    a1=list(set([int(input())for i in range(s1)]))
+    s2=int(input())
+    a2=list(set([int(input())for i in range(s2)]))
+for i in a1:
+    for j in a2:
+        if i==j:
+            print(i,end=' ')
