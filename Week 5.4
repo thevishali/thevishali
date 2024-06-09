@@ -1,0 +1,16 @@
+n=int(input())
+arr=[int(input())for x in range(n)]
+def is_sird(lst):
+    i=all(lst[i]<lst[i+1] for i in range(len(lst)-1))
+    d=all(lst[i]>lst[i+1] for i in range(len(lst)-1))
+    return i or d
+if is_sird(arr):
+    print("True")
+else:
+    for i in range(len(arr)):
+        temp=arr[:i]+arr[i+1:]
+        if is_sird(temp):
+            print("True")
+            break
+    else:
+        print("False")
