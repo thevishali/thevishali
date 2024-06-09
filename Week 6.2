@@ -1,0 +1,10 @@
+def is_binary(string):
+    binary_set = set('01')
+    return set(string).issubset(binary_set)
+# Test cases
+a=input()
+b=is_binary(a)
+if b==True:
+    print("Yes")
+else:
+    print("No")
