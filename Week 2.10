@@ -1,0 +1,10 @@
+a=int(input())
+b=int(input())
+c=int(input())
+d=int(input())
+e=int(input())
+x=b%a==0
+y=c%a==0
+z=d%a==0
+w=e%a==0
+print(x,y,z,w,sep=" ")
