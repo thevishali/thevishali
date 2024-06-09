@@ -1,0 +1,12 @@
+def are_strings_balanced(s1, s2):
+    # Convert both strings to sets
+    set_s1 = set(s1)
+    set_s2 = set(s2)
+    
+    # Check if set_s1 is a subset of set_s2
+    return set_s1.issubset(set_s2)
+# Read input strings
+s1 = input().strip()
+s2 = input().strip()
+# Check if strings are balanced and print the result
+print(are_strings_balanced(s1, s2)
