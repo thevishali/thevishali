@@ -1,0 +1,17 @@
+def reverse_order(s):
+    # Find the position of '@' and '.'
+    at_index = s.find('@')
+    dot_index = s.find('.')
+    
+    # Extract the parts
+    extension = s[dot_index + 1:]
+    domain = s[at_index + 1: dot_index]
+    username = s[:at_index]
+    # Print in reverse order
+    print(extension)
+    print(domain)
+    print(username)
+# Input
+s = input().strip()
+# Output
+reverse_order(s)
