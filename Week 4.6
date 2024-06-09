@@ -1,0 +1,27 @@
+def count_characters(s):
+    # Initialize counts for letters, digits, and special symbols
+    letter_count = 0
+    digit_count = 0
+    special_count = 0
+    
+    # Iterate through each character in the string
+    for char in s:
+        # Check if the character is a letter
+        if char.isalpha():
+            letter_count += 1
+        # Check if the character is a digit
+        elif char.isdigit():
+            digit_count += 1
+        # If it's neither a letter nor a digit, consider it as a special symbol
+        else:
+            special_count += 1
+    
+    return letter_count, digit_count, special_count
+# Read input string
+s = input().strip()
+# Call the function and unpack the result
+letters, digits, special = count_characters(s)
+# Print the counts
+print(letters)
+print(digits)
+print(special)
